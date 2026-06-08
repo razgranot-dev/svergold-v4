@@ -710,6 +710,12 @@ html[dir="rtl"] .mobile-menu.open { transform: none; }
 /* Tall section drives the scroll progress; the inner stage is position:sticky and
    pins for one viewport while --p animates. NATIVE scroll only — no body lock. */
 .hero-x { --p: 1; position: relative; background: var(--bg); }
+/* JS browsers (non-reduced-motion) paint the collapsed START state from frame 1,
+   so the hero never flashes its expanded end-state before hero-expand.js runs.
+   No-JS and reduced-motion keep --p:1 (static expanded fallback). */
+@media (prefers-reduced-motion: no-preference) {
+  html.hx-js .hero-x { --p: 0; }
+}
 .hero-x.hx-ready { height: 200svh; }     /* scroll distance for the expand (JS on) */
 .hero-x.hx-static { height: 100svh; }    /* reduced-motion: static expanded hero */
 .hx-sticky { position: sticky; top: 0; height: 100svh; overflow: hidden; background: var(--bg); }

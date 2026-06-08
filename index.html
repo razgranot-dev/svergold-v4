@@ -18,7 +18,11 @@
      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
      <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
      ============================================================ -->
-<script>window.dataLayer = window.dataLayer || [];</script>
+<script>window.dataLayer = window.dataLayer || [];
+/* Mark JS available before first paint so the hero paints its correct collapsed
+   start state (--p:0) immediately, instead of briefly flashing the expanded
+   end-state before hero-expand.js runs. No-JS keeps the expanded fallback. */
+document.documentElement.classList.add('hx-js');</script>
 <title>ייבוא בינלאומי, עמילות מכס ולוגיסטיקה בחיפה | Svergold</title>
 <meta name="description" content="חברת יבוא וסחר בינלאומי מחיפה: איתור ספקים בחו״ל, עמילות מכס, שילוח ואחסנה צמודת־נמל בחיפה ובאשדוד — עד הדלת שלכם. בנטונייט, פולימרים, מזון ורכבי יוקרה. צוות אחד אחראי על כל המשלוח." />
 <meta name="theme-color" content="#0b0b0c" />
@@ -139,7 +143,7 @@
       <div class="hx-bg" aria-hidden="true">
         <!-- open-sea drone footage as the full hero backdrop (fades as the ship clip expands) -->
         <video class="hx-bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto"
-               poster="assets/hero-poster.jpg" disablepictureinpicture
+               poster="assets/sea-poster.jpg" disablepictureinpicture
                controlslist="nodownload noplaybackrate nofullscreen" tabindex="-1">
           <source src="assets/sea-bg.mp4" type="video/mp4" />
         </video>
@@ -147,7 +151,7 @@
       <div class="hx-stage">
         <div class="hx-media" aria-hidden="true">
           <video class="hx-video" autoplay muted loop playsinline webkit-playsinline preload="auto"
-                 poster="assets/hero-poster.jpg" disablepictureinpicture
+                 poster="assets/hero-center-poster.jpg" disablepictureinpicture
                  controlslist="nodownload noplaybackrate nofullscreen" tabindex="-1">
             <source src="assets/hero-center.mp4" type="video/mp4" />
           </video>
