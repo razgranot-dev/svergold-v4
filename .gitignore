@@ -1,0 +1,27 @@
+# local secrets
+.env
+.env.local
+
+# dependencies / OS
+node_modules/
+.DS_Store
+Thumbs.db
+
+# dev/test artifacts and unused local files (not part of the deployed site)
+screenshots/
+uploads/
+.thumbnail
+
+# orphaned assets no longer referenced by the site
+assets/ship.mp4
+assets/ship-cinematic.mp4
+assets/ship-cinematic-poster.jpg
+assets/logo-full.png
+
+# local QA / capture artifacts
+_qa*.mjs
+_shots*.mjs
+_council-shots/
+_qa-shots/
+
+.vercel
