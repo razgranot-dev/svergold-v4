@@ -1,0 +1,14 @@
+# Never upload local secrets / dev-only / junk to a Vercel deployment
+.git
+.env
+.env.local
+node_modules
+uploads
+.thumbnail
+scripts
+serve.py
+README.md
+_qa-shots
+_council-shots
+_qa*.mjs
+_shots*.mjs
