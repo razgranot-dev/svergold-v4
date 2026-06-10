@@ -546,6 +546,28 @@ html[lang="he"] .footer-col h4, html[lang="ru"] .footer-col h4 { letter-spacing:
 [data-theme="dark"] .footer-col a:hover { color: var(--gold-bright); }
 .footer-bottom { display:flex; justify-content: space-between; gap:20px; flex-wrap:wrap; padding-top: 28px; font-size: 13px; color: var(--text-soft); }
 
+/* ---------------- GRID credit ---------------- */
+.credit-bar { background: var(--bg); border-top: 1px solid var(--border); padding-block: 20px; }
+.credit-row { display: flex; align-items: center; justify-content: center; gap: 12px 20px; flex-wrap: wrap; text-align: center; }
+.credit { display: inline-flex; align-items: center; gap: 11px; color: var(--text-soft); font-size: 14px; font-weight: 500; letter-spacing: 0.01em; transition: color 0.3s var(--ease); }
+.credit:hover { color: var(--text); }
+.credit-logo { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 9px; box-shadow: 0 4px 14px rgba(20, 16, 6, 0.16); transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); flex-shrink: 0; }
+[data-theme="dark"] .credit-logo { box-shadow: 0 0 0 1px rgba(245, 247, 248, 0.08), 0 6px 18px rgba(0, 0, 0, 0.5); }
+.credit:hover .credit-logo { transform: translateY(-1px); }
+.credit-logo img { width: 34px; height: 34px; display: block; }
+.credit-grid { font-family: var(--font-display); font-weight: 700; letter-spacing: 0.05em; color: var(--text); }
+.credit-grid .r { color: #3b83f7; }
+.credit-sep { width: 1px; height: 18px; background: var(--border-strong); flex-shrink: 0; }
+.credit-phone { font-size: 14px; font-weight: 600; letter-spacing: 0.02em; color: var(--text-soft); font-variant-numeric: tabular-nums; transition: color 0.3s var(--ease); }
+.credit-phone:hover { color: var(--gold-deep); }
+[data-theme="dark"] .credit-phone:hover { color: var(--gold-bright); }
+@media (max-width: 560px) {
+  /* stack for elegance + lift content clear of the floating action buttons */
+  .credit-bar { padding-block: 22px 96px; }
+  .credit-sep { display: none; }
+  .credit-row { flex-direction: column; gap: 13px; }
+}
+
 /* ---------------- Floating actions ---------------- */
 .floats { position: fixed; inset-block-end: 24px; inset-inline-end: 24px; z-index: 90; display: flex; flex-direction: column; gap: 12px; }
 .fab { width: 54px; height: 54px; border-radius: 999px; display:grid; place-items:center; box-shadow: var(--shadow-md); transition: transform 0.22s var(--ease); }
